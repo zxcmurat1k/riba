@@ -3188,6 +3188,9 @@ input, select, textarea {
 				-ms-transform: translateX(17em);
 				transform: translateX(17em);
 				right: 0;
+
+				position: fixed;
+				z-index: 9999;
 			}
 
 				#header > header {
@@ -3319,3 +3322,38 @@ input, select, textarea {
 			}
 
 	}
+#gameArea {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #333;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #b3e5fc, #e1f5fe);
+}
+
+#fish {
+  position: absolute;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#fish:active {
+  transform: scale(1.2);
+}
+section {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+canvas, #game {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+#header {
+    z-index: 9999 !important;
+}
